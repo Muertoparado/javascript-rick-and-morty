@@ -1,17 +1,17 @@
 export default{
-    image:"https://multimedia.uned.ac.cr/pem/fitopatologia/imag/galeria/Fig-30.jpg",
+    image:"./img/im1.jpg",
 
     btn:{
         name: "Continuar"
     },
-    banner:[
+    banner:
         {
             title:"csdcsdc",
             paragraph:"psrraafo",
         }
-    ],
+    ,
     showImage(){
-        document.querySelector(".imgStyle").getElementsByClassName.backgroundImage = `url(${this.image})`;
+        document.querySelector(".imgStyle").style.backgroundImage = `url(${this.image})`;
     },
     showSectionBanner(){
         document.querySelector("#banner").insertAdjacentHTML("beforeend",`
