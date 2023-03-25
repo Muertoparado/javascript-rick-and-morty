@@ -5,7 +5,7 @@ import myPost from "./myPost.js";
 
 myHeader.listTitle();
 myHeader.listarCompany();
-/* myAside.showAside(); */
-/* myPost.showPost(); */
+myPost.showPost();
 myBanner.showImage();
 myBanner.showSectionBanner();
+myAside.showAside();
