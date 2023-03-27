@@ -13,3 +13,5 @@ myAside.showAside();
 mySeccion.showTitle();
 mySeccion.showArticule1();
 mySeccion.showArticule2();
+mySeccion.showArticule3();
+mySeccion.showArticule4();
