@@ -42,7 +42,7 @@ showAside() {
         <p class="mb-0">${p1.paragraph}</p>
         </div>`
       ;
-    },
+},
     list (p1){
         return ` <div class="p-4">
         <h4 class="fst-italic">${p1.title}</h4>
