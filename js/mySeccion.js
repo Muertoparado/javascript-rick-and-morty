@@ -54,38 +54,29 @@ export default{
                 li:"t",
             }
         ],
+    },
         articule4:{
             title:"lllll",
             title1:"fgh",
             title2:"nnn",
+            title3:"qwx",
             paragraph1:"qq", 
             paragraph2:"x",
             paragraph3:"cv",
             paragraph4:"hj",
+            paragraph5:"cv",
+            paragraph6:"hj",
+            paragraph7:"cv",
+            paragraph8:"hjcxza",
             listh:[
                 {
-                    li:"1",
-                },
-                {
-                    li:"2",
-                },
-                {
-                    li:"3",
-                },
-                {
-                    li:"4",
-                },
-                {
-                    li:"5",
-                },
-                {
-                    li:"6",
+                    li1:"autor",
                 },
             ]
         
 
         }
-    },
+    ,
 showTitle(){
     document.querySelector("#titleseccion").insertAdjacentHTML("beforeend",`
     <h3 class="pb-4 mb-4 fst-italic border-bottom">
@@ -145,37 +136,23 @@ showArticule3(){
             },
 showArticule4(){
     document.querySelector("#seccion4").insertAdjacentHTML("beforeend",`
-    <h2>${this.articule4.title}</h2>
+    <h2>${this.articule4.title} </h2>
     <p>${this.articule4.paragraph1}</p>
     <ul>
-      <li><strong>${this.articule4.title1}</strong>, use <code
-          class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
-      <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.
+      <li><strong>${this.articule4.paragraph2}</strong></li>
+      <li><em>${this.articule4.paragraph3}</em>
       </li>
-      <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code
-          class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code
-          class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
-      <li>Citations, like <cite>— Mark Otto</cite>, should use <code
-          class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
-      <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code>
-        and <ins>inserted</ins> text should use <code
-          class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
-      <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code>
-        and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.
-      </li>
+      <li><abbr title="HyperText Markup Langage">${this.articule4.paragraph4}</abbr></li>
+      <li><cite>${this.articule4.listh.li1}</cite></li>
+      <li><del>${this.articule4.paragraph5}</del></li>
     </ul>
     <p>Most of these elements are styled by browsers with few modifications on our part.</p>
-    <h2>Heading</h2>
-    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-      show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-      demonstration flowing, so be on the lookout for this exact same string of text.</p>
-    <h3>Sub-heading</h3>
-    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-      show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-      demonstration flowing, so be on the lookout for this exact same string of text.</p>
-    <pre><code>Example code block</code></pre>
-    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
-      repetitive body text used throughout.</p>
+    <h2>${this.articule4.title1}</h2>
+    <p>${this.articule4.paragraph6}</p>
+    <h3>${this.articule4.title2}</h3>
+    <p>${this.articule4.paragraph7}</p>
+    <pre><code>${this.articule4.title3}</code></pre>
+    <p>${this.articule4.paragraph8}</p>
     `)
 }
 
