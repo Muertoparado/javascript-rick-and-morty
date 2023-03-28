@@ -3,6 +3,7 @@ import myAside from "./myAside.js";
 import myBanner from "./myBanner.js";
 import myPost from "./myPost.js";
 import mySeccion from "./mySeccion.js";
+import myTable from "./myTable.js";
 
 myHeader.listTitle();
 myHeader.listarCompany();
@@ -15,3 +16,4 @@ mySeccion.showArticule1();
 mySeccion.showArticule2();
 mySeccion.showArticule3();
 mySeccion.showArticule4();
+myTable.showSeccion1();
