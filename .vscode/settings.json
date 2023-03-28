@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "nueva pagina js"
+        "nueva pagina js",
+        "mySeccion "
     ]
 }

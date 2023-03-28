@@ -1,5 +1,5 @@
 export default{
-    seccion1:{
+    parte1:{
     title:"q",
     date:"23",
     by:"",
@@ -7,7 +7,7 @@ export default{
     paragraph2: "",
     paragraph3: "",
     },
-    seccion2:{
+    parte2:{
         title:"",
         paragraph1: "",
         paragraph2:"",
@@ -59,7 +59,7 @@ export default{
     ]
     }
 },
-    seccion3:{
+  parte3:{
 
     title:"",
     date:"",
@@ -86,16 +86,16 @@ export default{
     },
 showSeccion1(){
     document.querySelector("#seccion5").insertAdjacentHTML("beforeend",`
-    <h2 class="blog-post-title">${this.seccion1.title}</h2>
-    <p class="blog-post-meta">${this.seccion1.date} <a href="#">${this.seccion1.by}</a></p>
+    <h2 class="blog-post-title">${this.parte1.title}</h2>
+    <p class="blog-post-meta">${this.parte1.date} <a href="#">${this.seccion1.by}</a></p>
 
-    <p>${this.seccion1.paragraph1}</p>
+    <p>${this.parte1.paragraph1}</p>
     <blockquote>
-      <p>${this.seccion1.paragraph2}</p>
+      <p>${this.parte1.paragraph2}</p>
     </blockquote>
-    <p>${this.seccion1.paragraph3}</p>
-    <h3>${this.seccion2.title}</h3>
-    <p>${this.seccion2.paragraph1}</p>
+    <p>${this.parte1.paragraph3}</p>
+    <h3>${this.parte2.title}</h3>
+    <p>${this.parte2.paragraph1}</p>
     <table class="table">
       <thead>
         <tr>
@@ -117,18 +117,18 @@ showSeccion1(){
       </tfoot>
     </table>
 
-    <p>${this.seccion2.paragraph2}</p>
+    <p>${this.parte2.paragraph2}</p>
   </article>
 
   <article class="blog-post">
     <h2 class="blog-post-title">${this.seccion3.title}</h2>
     <p class="blog-post-meta">${this.seccion3.date} <a href="#">${this.seccion3.by}</a></p>
 
-    <p>${this.seccion3.paragraph1}</p>
+    <p>${this.parte2.paragraph1}</p>
     <ul>
       <li id="listaS3"></li>
     </ul>
-    <p>${this.seccion3.paragraph2}</p>
+    <p>${this.parte3.paragraph2}</p>
   </article>
 
   <nav class="blog-pagination" aria-label="Pagination">
@@ -137,31 +137,31 @@ showSeccion1(){
   </nav>
     `)
 
-    this.seccion2.tabla.forEach((val, id) => {
+    this.parte2.tabla.forEach((val, id) => {
         document.querySelector("#listTh1").insertAdjacentHTML("beforeend",`
         <th>${val.fila1}</th>
         `)
         
     });
-    this.seccion2.tabla.forEach((val, id) => {
+    this.parte2.tabla.forEach((val, id) => {
         document.querySelector("#listTh2").insertAdjacentHTML("beforeend",`
         <td>${val.fila2}</td>
         `)
         
     });
-    this.seccion2.tabla.forEach((val, id) => {
+    this.parte2.tabla.forEach((val, id) => {
         document.querySelector("#listTh3").insertAdjacentHTML("beforeend",`
         <td>${val.fila3}</td>
         `)
         
     });
-    this.seccion2.tabla.forEach((val, id) => {
+    this.parte2.tabla.forEach((val, id) => {
         document.querySelector("#listTh4").insertAdjacentHTML("beforeend",`
         <td>${val.filaf}</td>
         `)
         
     });
-    this.seccion2.tabla.forEach((val, id) => {
+    this.parte2.tabla.forEach((val, id) => {
       document.querySelector("#listS3").insertAdjacentHTML("beforeend",`
       <li>${val.lista}</li>
       `)
