@@ -1,19 +1,23 @@
 export default {
     title: {
-        name: "Rick and Mossrty",
-        href: "#",
+        name: "Rick and Morty",
+        href: "https://www.netflix.com/ad/title/80014749",
 
     }
     ,
     company: [
         {
             name: "Warner Bros Discovery",
-            href: "#"
+            href: "https://wbd.com/adult-swim-reveals-rick-and-morty-season-six-global-premiere-date/"
         },
         {
-            name: "Rick and Morty",
+            name: "Adult swim",
+            href: "https://www.adultswim.com/videos/rick-and-morty"
+        },
+        {
+            name: "Campusland",
             href: "#"
-        }
+        },
     ],
     listTitle() {
         document.querySelector("#tituloprincipal").insertAdjacentHTML("beforeend", `<a class="blog-header-logo text-dark" href="${this.title.href}">${this.title.name}</a>`)

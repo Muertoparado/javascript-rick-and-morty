@@ -1,9 +1,9 @@
 export default{
     seccion1:{
-    title:"",
-    date:"",
+    title:"q",
+    date:"23",
     by:"",
-    paragraph1: "",
+    paragraph1: "cc",
     paragraph2: "",
     paragraph3: "",
     },
@@ -14,41 +14,41 @@ export default{
     tabla:{
     fila1:[
         {
-        txt:"", 
+        txt:"a", 
         },
         {
-        txt:"", 
+        txt:"c", 
         },
         {
-        txt:"", 
+        txt:"a", 
         },
     ],
     fila2:[
         {
-        txt:"", 
+        txt:"v", 
         },
         {
-        txt:"", 
+        txt:"m", 
         },
         {
-        txt:"", 
+        txt:"u", 
         },
 
     ],
     fila3:[
         {
-        txt:"", 
+        txt:"p", 
         },
         {
-        txt:"", 
+        txt:"u", 
         },
         {
-        txt:"", 
+        txt:"l", 
         },
     ],
     filaf:[
         {
-        txt:"", 
+        txt:"c", 
         },
         {
         txt:"", 
@@ -60,20 +60,23 @@ export default{
     }
 },
     seccion3:{
-        title:"",
+
+    title:"",
+    date:"",
+    by:"",
     paragraph1: "",
     paragraph2: "",
     paragraph3: "",
     paragraph4: "",
     lista:[
         {
-            l:"", 
+            l:",", 
         },
         {
-            l:"", 
+            l:"n", 
         },
         {
-            l:"", 
+            l:"b", 
         },
     ],
     btn:{
@@ -114,31 +117,26 @@ showSeccion1(){
       </tfoot>
     </table>
 
-    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
-      repetitive body text used throughout.</p>
+    <p>${this.seccion2.paragraph2}</p>
   </article>
 
   <article class="blog-post">
-    <h2 class="blog-post-title">New feature</h2>
-    <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+    <h2 class="blog-post-title">${this.seccion3.title}</h2>
+    <p class="blog-post-meta">${this.seccion3.date} <a href="#">${this.seccion3.by}</a></p>
 
-    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-      show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-      demonstration flowing, so be on the lookout for this exact same string of text.</p>
+    <p>${this.seccion3.paragraph1}</p>
     <ul>
-      <li>First list item</li>
-      <li>Second list item with a longer description</li>
-      <li>Third list item to close it out</li>
+      <li id="listaS3"></li>
     </ul>
-    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
-      repetitive body text used throughout.</p>
+    <p>${this.seccion3.paragraph2}</p>
   </article>
 
   <nav class="blog-pagination" aria-label="Pagination">
-    <a class="btn btn-outline-primary" href="#">Older</a>
-    <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+    <a class="btn btn-outline-primary" href="#">${this.seccion3.btn.name1}</a>
+    <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">${this.seccion3.btn.name2}</a>
   </nav>
     `)
+
     this.seccion2.tabla.forEach((val, id) => {
         document.querySelector("#listTh1").insertAdjacentHTML("beforeend",`
         <th>${val.fila1}</th>
@@ -163,7 +161,11 @@ showSeccion1(){
         `)
         
     });
+    this.seccion2.tabla.forEach((val, id) => {
+      document.querySelector("#listS3").insertAdjacentHTML("beforeend",`
+      <li>${val.lista}</li>
+      `)
+      
+  });
 }
-
-    
 }

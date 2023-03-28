@@ -1,12 +1,12 @@
 export default{
-    titleSeccion:"hablaa",
+    titleSeccion:"Producion",
     articule1:{
-        title:"erfe",
-        date:"12",
+        title:"Adult Swim",
+        date:"2013",
         linkHref:"#",
-        by:"v",
-        paragraph1:"dqwd", 
-        paragraph2:"dscacannnnnn",
+        by:"Nicolas",
+        paragraph1:"La serie es producida por Adult Swim, una red de televisión por cable propiedad de Turner Broadcasting System, una subsidiaria de WarnerMedia. Los creadores, Justin Roiland y Dan Harmon, son propietarios de la compañía de producción de televisión Starburns Industries, junto con Dino Stamatopoulos y James A. Fino. Además, la serie ha sido producida por Williams Street, una compañía de producción de televisión y animación también propiedad de Turner Broadcasting System.", 
+        paragraph2:`El personaje de Rick fue inspirado en el personaje de Doc Brown de "Back to the Future", interpretado por Christopher Lloyd.`,
     },
     articule2:{
         title:"s",
@@ -16,28 +16,28 @@ export default{
 
     },
     articule3:{
-        title:"qqqqq",
+        title:"información relacionada con la serie Rick and Morty",
         title1:"fgh",
         title2:"nnn",
         title3:"jkj",
-        paragraph1:"qq", 
-        paragraph2:"x",
+        paragraph1:"a serie ha ganado una gran cantidad de seguidores, quienes han creado una comunidad muy activa en línea. La serie ha inspirado memes, teorías de conspiración, productos de merchandising, entre otros.", 
+        paragraph2:`La serie ha sido objeto de controversia en ocasiones, como cuando algunos fanáticos pidieron que McDonald's reeditara su salsa "Szechuan" después de que se mencionara en un episodio de la serie. También ha habido debates sobre la representación de ciertos personajes y temas en la serie.`,
         paragraph3:"cv",
         paragraph4:"hj",
         paragraph5:"m",
         paragraph6:"n",
         list1:[
             {
-                li:"fgb"
+                li:`El estilo de animación de la serie está inspirado en la animación clásica de los años 60 y 70, especialmente en "The Rocky and Bullwinkle Show". La serie también ha sido comparada con la película "Back to the Future", debido a la relación entre los personajes de Rick y Morty."`
             },
             {
-                li:"bb"
+                li:"La serie ha sido elogiada por su exploración de temas filosóficos y científicos, como la existencia de universos paralelos, la teoría del caos, la inteligencia artificial, la clonación, la inmortalidad, la psicología, entre otros."
             },
             {
-                li:"wer"
+                li:"La serie ha sido nominada y ha ganado varios premios, incluyendo dos Premios Emmy por Mejor Programa Animado y varios Premios Critics' Choice por Mejor Serie Animada."
             },
             {
-                li:"iolio"
+                li:"La serie ha ganado una gran cantidad de seguidores, quienes han creado una comunidad muy activa en línea. La serie ha inspirado memes, teorías de conspiración, productos de merchandising, entre otros."
             },
         ],
         list2:[
@@ -88,7 +88,7 @@ showTitle(){
 
 showArticule1(){
     document.querySelector("#seccion1").insertAdjacentHTML("beforeend",`
-    <h2 class="blog-post-title">Sample blog post</h2>
+    <h2 class="blog-post-title">${this.articule1.title}</h2>
     <p class="blog-post-meta">${this.date} <a href="${this.articule1.linkHref}">${this.articule1.by}</a></p>
 
     <p>${this.articule1.paragraph1}</p>
