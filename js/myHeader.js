@@ -1,3 +1,4 @@
+import config from `../storage/config.js`;
 export default {
     title: {
         name: "Rick and Morty",

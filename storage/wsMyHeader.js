@@ -11,6 +11,7 @@ export let wsMyHeader={
 
         });
         document.querySelector("#company").insertAdjacentHTML("beforeend", plantilla);
+        return plantilla;
 }
 }
 
