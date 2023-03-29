@@ -76,11 +76,11 @@ export default{
                 <strong class="d-inline-block mb-2 text-success">${val.articule}</strong>
                 <h3 class="mb-0">${val.title}</h3>
                 <div class="mb-1 text-muted">${val.date}</div>
-                <p class="mb-auto">${val.paragraph}</p>
-                <a href="${val.btn.href}" class="stretched-link">${val.btn.name}</a>
+                <p class="h-25">${val.paragraph}</p>
+                <a href="${val.btn.href}" class="stretched-link ">${val.btn.name}</a>
               </div>
-              <div class="col-7 d-none d-lg-block">
-                <img class="responsiveImg" src="${val.image}" alt="Bee Icon"></img>
+              <div class="col-6 d-none d-lg-block">
+                <img class="responsiveImg h-50" src="${val.image}" alt="Bee Icon"></img>
     
               </div>
 

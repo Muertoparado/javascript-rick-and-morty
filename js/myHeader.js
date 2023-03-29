@@ -19,19 +19,29 @@ export default {
             href: "#"
         },
     ],
-    listTitle() {
-        document.querySelector("#tituloprincipal").insertAdjacentHTML("beforeend", `<a class="blog-header-logo text-dark" href="${this.title.href}">${this.title.name}</a>`)
 
-    },
-    listarCompany() {
-        let plantilla = "";
-        this.company.forEach((val, id) => {
-            plantilla += `<a class="p-2 link-secondary" href="${val.href}">${val.name}</a>`
-            console.log(val);
-
+    show() {
+        //creacion worker
+        const ws = new Worker("storage/wsMyHeader.js", {
+            type: "module"
         });
-        document.querySelector("#company").insertAdjacentHTML("beforeend", plantilla);
+        //envio mensaje al worker
+        let id = [];
+        let count = 0;
+        //id.push(title);
+        ws.postMessage({ module: "listTitle", data: this.title });
+        //id.push(company)
+        ws.postMessage({ module: "listarCompany", data: this.company });
+        id = ["#title", "company"];
 
-    },
-
+        //lectura lo que llega al worker
+        ws.addEventListener("message", (e) => {
+            //estamos parseando lo que trae evento {mensaje}
+            let doc = new DOMParser().parseFromString(e.data, "text/html");
+            //insertar en index selector company
+            document.querySelector(id[count].append(...doc.body.children));
+            //traer trabajo worker
+            (id.length-1 == count) ? ws.terminate() : count++;
+        })
+    }
 }

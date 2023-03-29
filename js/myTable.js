@@ -11,6 +11,7 @@ export default {
     title: "Caracteristicas personajes destacados",
     paragraph1: "La historia y los personajes reflejan la creatividad y la imaginación del autor al crear un mundo de ficción que sigue ciertas reglas y tiene su propia lógica interna. A través de la historia, el autor puede hacer referencias a eventos y figuras históricas reales para establecer un contexto más realista, pero utiliza estos elementos para construir una trama que se aparta de la realidad y que puede incluir elementos fantásticos, mágicos o sobrenaturales.",
     paragraph2: "Los personajes, por su parte, pueden ser muy reales en cuanto a sus personalidades, motivaciones y acciones, pero también pueden tener características o habilidades sobrenaturales que los diferencian del mundo real. Estos elementos fantásticos agregan una capa de interés y emoción a la historia, permitiendo que el lector explore nuevos mundos y horizontes. En resumen, la combinación de elementos históricos y fantásticos en la creación de una historia y sus personajes genera un ambiente realista pero con historias fuera de lo que podríamos llamar real, que permite al autor expresar tanto su creatividad como su conocimiento de la historia y la cultura en la que está ambientada su obra.",
+  },
     tabla: {
       fila1: [
         {
@@ -25,7 +26,7 @@ export default {
       ],
       fila2: [
         {
-          txt: "Frase célebre",
+          txt: "Rick",
         },
         {
           txt: "El protagonista, un genio científico egoísta y alcohólico.",
@@ -57,8 +58,8 @@ export default {
           txt: "I hate my life, I hate my life, I hate my life.",
         },
       ]
-    }
-  },
+    },
+ /*  }, */
   parte3: {
 
     title: "Personajes",
@@ -68,15 +69,16 @@ export default {
     paragraph2: "Morty Smith: Nieto de Rick, Morty es un adolescente inseguro y un poco torpe. Es el personaje que los espectadores a menudo tienen como punto de identificación, y su ingenuidad y simpatía son sus principales rasgos sobresalientes. En comparación con Rick, Morty aporta una perspectiva más ingenua y moral a las aventuras, y como personaje, es importante para equilibrar la serie.",
     paragraph3: "Summer Smith: Es la hermana mayor de Morty y es un personaje que se ha desempeñado como secundario durante gran parte de la serie. Casi siempre está dispuesta a participar en las aventuras de Rick y Morty, y ha demostrado tener un ingenio agudo. Summer aporta una perspectiva más joven y optimista a la serie.",
     paragraph4: "Beth Smith: Es la hija de Rick y madre de Morty y Summer. A menudo ha sido retratada como una madre cariñosa pero problemática, y ha tenido problemas para reconciliar su amor por su padre con la realidad de su comportamiento tóxico. Beth aporta una perspectiva más madura y emocionalmente compleja a la serie.",
+   
     lista: [
       {
-        l: `Cuando se revela que desde hace tiempo tenía un plan para escapar de la prisión intergaláctica en la que estaba atrapado, lo que demuestra su inteligencia y habilidad para planificar y ejecutar planes complejos. (Temporada 3, Episodio 1: "La ricklación de Rick")`,
+        lx: `Cuando se revela que desde hace tiempo tenía un plan para escapar de la prisión intergaláctica en la que estaba atrapado, lo que demuestra su inteligencia y habilidad para planificar y ejecutar planes complejos. (Temporada 3, Episodio 1: "La ricklación de Rick")`,
       },
       {
-        l: `El episodio "The Old Man and the Seat" (Temporada 4, Episodio 2), Morty se convierte accidentalmente en el objeto de adoración de un grupo de extraterrestres que lo consideran un "dios cagón". A medida que su culto aumenta en número, Morty comienza a disfrutar del poder que le otorga su nueva posición, pero finalmente decide renunciar a ese poder y volver a su vida normal. En este episodio, Morty aprende una lección importante sobre la tentación del poder y la responsabilidad que conlleva.`,
+        lx: `El episodio "The Old Man and the Seat" (Temporada 4, Episodio 2), Morty se convierte accidentalmente en el objeto de adoración de un grupo de extraterrestres que lo consideran un "dios cagón". A medida que su culto aumenta en número, Morty comienza a disfrutar del poder que le otorga su nueva posición, pero finalmente decide renunciar a ese poder y volver a su vida normal. En este episodio, Morty aprende una lección importante sobre la tentación del poder y la responsabilidad que conlleva.`,
       },
       {
-        l: `En el episodio "The ABC's of Beth" (Temporada 3, Episodio 9), Summer se une a su padre Jerry en una misión para rescatar a su madre Beth de una dimensión paralela, donde se ha convertido en una cirujana con tendencias homicidas. En este episodio, Summer muestra un fuerte sentido de la familia y hace todo lo posible para ayudar a su madre y reunir a su familia, incluso si eso significa sacrificar su propia felicidad y comodidad.`,
+        lx: `En el episodio "The ABC's of Beth" (Temporada 3, Episodio 9), Summer se une a su padre Jerry en una misión para rescatar a su madre Beth de una dimensión paralela, donde se ha convertido en una cirujana con tendencias homicidas. En este episodio, Summer muestra un fuerte sentido de la familia y hace todo lo posible para ayudar a su madre y reunir a su familia, incluso si eso significa sacrificar su propia felicidad y comodidad.`,
       },
     ],
     btn: {
@@ -124,11 +126,12 @@ export default {
     <h2 class="blog-post-title">${this.parte3.title}</h2>
     <p class="blog-post-meta">${this.parte3.date} <a href="#">${this.parte3.by}</a></p>
 
-    <p>${this.parte2.paragraph1}</p>
+    <p>${this.parte3.paragraph1}</p>
     <ul>
       <li id="listaS3"></li>
     </ul>
     <p>${this.parte3.paragraph2}</p>
+    <p>${this.parte3.paragraph3}</p>
   </article>
 
   <nav class="blog-pagination" aria-label="Pagination">
@@ -137,35 +140,37 @@ export default {
   </nav>
     `)
 
-    this.parte2.tabla.forEach((val, id) => {
-      document.querySelector("#listTh1").insertAdjacentHTML("beforeend", `
-        <th>${val.fila1}</th>
+      this.tabla.fila1.forEach((val, id) => {
+        document.querySelector("#listTh1").insertAdjacentHTML("beforeend", `
+        <th>${val.txt}</th>
         `)
 
     });
-    this.parte2.tabla.forEach((val, id) => {
+    this.tabla.fila2.forEach((val, id) => {
       document.querySelector("#listTh2").insertAdjacentHTML("beforeend", `
-        <td>${val.fila2}</td>
+        <td>${val.txt}</td>
         `)
 
     });
-    this.parte2.tabla.forEach((val, id) => {
+    this.tabla.fila3.forEach((val, id) => {
       document.querySelector("#listTh3").insertAdjacentHTML("beforeend", `
-        <td>${val.fila3}</td>
+        <td>${val.txt}</td>
         `)
 
     });
-    this.parte2.tabla.forEach((val, id) => {
+    this.tabla.filaf.forEach((val, id) => {
       document.querySelector("#listTh4").insertAdjacentHTML("beforeend", `
-        <td>${val.filaf}</td>
+        <td>${val.txt}</td>
         `)
 
     });
-    this.parte2.tabla.forEach((val, id) => {
+    this.parte3.lista.forEach((val, id) => {
       document.querySelector("#listS3").insertAdjacentHTML("beforeend", `
-      <li>${val.lista}</li>
+      <li>${val.lx}</li>
       `)
-
+/* this.articule3.list1.forEach((val, id) =>{
+                document.querySelector("#listUl").insertAdjacentHTML("beforeend",`<li>${val.li}</li>`)
+            }) */
     });
   }
 }
