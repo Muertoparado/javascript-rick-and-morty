@@ -8,7 +8,8 @@ import myTable from "./js/myTable.js";
 /* myHeader.listTitle();
 myHeader.listarCompany(); */
 myHeader.show();
-myPost.showPost();
+
+/* myPost.showPost();
 myBanner.showImage();
 myBanner.showSectionBanner();
 myAside.showAside();
@@ -17,4 +18,4 @@ mySeccion.showArticule1();
 mySeccion.showArticule2();
 mySeccion.showArticule3();
 mySeccion.showArticule4();
-myTable.showSeccion1();
+myTable.showSeccion1(); */

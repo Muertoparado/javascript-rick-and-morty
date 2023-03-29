@@ -168,6 +168,7 @@ export default {
       document.querySelector("#listS3").insertAdjacentHTML("beforeend", `
       <li>${val.lx}</li>
       `)
+      
 /* this.articule3.list1.forEach((val, id) =>{
                 document.querySelector("#listUl").insertAdjacentHTML("beforeend",`<li>${val.li}</li>`)
             }) */
